@@ -43,13 +43,13 @@
    Defines
 **************************************************************************/
 //#define DEBUG
-#define IR_SEND_PIN     D1
-#define IR_RECEIVE_PIN  D4
+#define IR_SEND_PIN     D5
+#define IR_RECEIVE_PIN  D1
 #define CONFIG_PIN      D7
 #define LED_PIN         D2
 
 const String FIRMWARE_NAME = "IR Blaster 360";
-const String VERSION       = "v2.7.6.d";
+const String VERSION       = "v2.7.6.f";
 
 /**************************************************************************
    Debug
@@ -107,7 +107,7 @@ bool shouldSaveConfig = false;                                // Flag for saving
 
 // ir
 #define TIMEOUT 15U    // capture long ir telegrams, e.g. AC
-#define RAWBUF 100U    // larger buffer
+#define RAWBUF 500U    // larger buffer
 IRrecv irrecv(IR_RECEIVE_PIN, RAWBUF, TIMEOUT);
 IRsend irsend(IR_SEND_PIN);
 bool toggle_RC6 = false;
